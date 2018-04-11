@@ -1,0 +1,20 @@
+.btn-primary {
+  border-color: #0E79B2;
+  background-color: #0E79B2;
+}
+.btn-primary:hover {
+  border-color: #096ba0;
+  background-color: #096ba0;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  border-color: #0E79B2;
+  background-color: #0E79B2;
+  opacity: 0.9;
+}
+
+
+.list-group-item.active {
+  background-color: #096ba0;
+  border-color: #096ba0;
+}

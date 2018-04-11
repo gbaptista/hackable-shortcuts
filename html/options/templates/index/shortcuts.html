@@ -1,0 +1,56 @@
+<table class="table shortcuts-table box-shadow">
+  <tbody>
+    {{#shortcuts}}
+      <tr id="{{id}}">
+        <td><strong>{{title}}</strong></td>
+
+        <td class="shortcut-column">
+          {{#object}}
+          <!-- S Shortcut -->
+            {{#context}}
+              <span class="context tippy" title="context">
+                <span class="modifier_keys">
+                  {{#modifier_keys}}
+                    <kbd>{{code}}</kbd>
+                  {{/modifier_keys}}
+                </span>
+
+                <span class="keys_sequence">
+                  {{#keys_sequence}}
+                    <kbd>{{code}}</kbd>
+                  {{/keys_sequence}}
+                </span>
+              </span>
+            {{/context}}
+
+            <span class="modifier_keys tippy" title="modifier">
+              {{#modifier_keys}}
+                <kbd>{{code}}</kbd>
+              {{/modifier_keys}}
+            </span>
+
+            <span class="keys_sequence tippy" title="sequence">
+              {{#keys_sequence}}
+                <kbd>{{code}}</kbd>
+              {{/keys_sequence}}
+            </span>
+          <!-- E Shortcut -->
+          {{/object}}
+        </td>
+
+        <td>
+          {{kind}}{{#details.domain}}: {{details.domain}}{{/details.domain}}
+        </td>
+        <td>
+          {{#is_tabs}}
+            {{details.action}}
+          {{/is_tabs}}
+          {{^is_tabs}}
+            {{details.action}}: <code>{{details.selector}}</code>
+          {{/is_tabs}}
+        </td>
+        <td><button type="button" data-id="{{id}}" class="btn btn-outline-danger btn-sm remove">remove</button></td>
+      </tr>
+    {{/shortcuts}}
+  </tbody>
+</table>

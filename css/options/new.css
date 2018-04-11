@@ -1,0 +1,51 @@
+body {
+  padding-bottom: 70px;
+}
+.new-box {
+  padding: 20px;
+  background-color: #FFF;
+  min-height: 400px;
+}
+
+.save-button {
+  text-align: center;
+}
+
+#shortcut-logs {
+  position: fixed;
+  bottom: 2%;
+  background-color: #FFF;
+  left: 2%;
+  width: 96%;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 10px 10px 8px #250744;
+  opacity: .9;
+}
+
+#shortcut-logs code {
+  padding: 10px;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+#shortcut-input {
+  width: 1px;
+  height: 1px;
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.shortcut_label {
+  padding: 4px 16px 6px 2px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: background-color 150ms linear;
+  margin: -2px 0;
+}
+
+#shortcut-radios {
+  margin: 6px 0 30px 0;
+}

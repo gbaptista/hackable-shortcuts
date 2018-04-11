@@ -1,0 +1,71 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_manifestName__",
+  "short_name": "Shortcuts",
+  "description": "__MSG_manifestDescription__",
+  "version": "0.0.1",
+  "author": "Guilherme Baptista",
+  "developer": {
+    "name": "Guilherme Baptista",
+    "url": "http://gbaptista.com"
+  },
+  "default_locale": "en_US",
+  "homepage_url": "https://gbaptista.github.io/hackable-shortcuts/",
+  "applications": {
+    "gecko": {
+      "id": "hackable-shortcuts@gbaptista.com"
+    }
+  },
+  "icons": {
+    "16": "images/icons/16.png",
+    "20": "images/icons/22.png",
+    "24": "images/icons/24.png",
+    "32": "images/icons/32.png",
+    "48": "images/icons/48.png",
+    "64": "images/icons/64.png",
+    "128": "images/icons/128.png",
+    "256": "images/icons/256.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icons/16.png",
+      "32": "images/icons/32.png",
+      "64": "images/icons/64.png"
+    },
+    "default_popup": "html/popup/index.html"
+  },
+  "options_page": "html/options/new.html",
+  "options_ui": {
+    "page": "html/options/new.html",
+    "open_in_tab": true,
+    "browser_style": false
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": [
+        "vendor/gbaptista/shortcuts/shortcuts.js",
+        "js/content/shortcut_listener.js",
+
+        "vendor/jquery/jquery-3.3.1.slim.min.js",
+
+        "js/content/shortcuts/page_element.js",
+
+        "vendor/gbaptista/best_selector/best_selector.js",
+        "js/content/interaction_detector.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/background/dispatcher.js"
+    ]
+  },
+  "permissions": [
+    "storage", "unlimitedStorage",
+    "tabs", "webNavigation", "tabHide",
+    "<all_urls>"
+  ]
+}

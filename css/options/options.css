@@ -1,0 +1,45 @@
+html, body {
+  font-family: 'Open Sans', arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-image: url(../../images/bakcground/wallhaven-634508.jpg);
+  background-position:top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #050119;
+  padding: 40px 0;
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 8px #250744;
+}
+
+.modifier_keys, .keys_sequence, .context {
+  cursor: pointer;
+}
+
+.modifier_keys kbd {
+  background-color: #C23A7A;
+}
+
+.modifier_keys:hover kbd {
+  background-color: #e50d72;
+}
+
+.keys_sequence kbd {
+  background-color: #2D3468;
+}
+
+.keys_sequence:hover kbd {
+  background-color: #273391;
+}
+
+.context kbd {
+  background-color: #3881A7;
+}
+
+.context:hover kbd {
+  background-color: #1e8fcc;
+}

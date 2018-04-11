@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style type="text/css">
+      html, body {
+        font-family: 'Open Sans', arial, sans-serif;
+        text-rendering: optimizeLegibility;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <button id="click">click me!</button>
+
+      <textarea>
+      </textarea>
+      <div class="classXPTO classA">
+        <button class="classXPTO">click me!</button>
+        <div id="idB" class="classXPTO">
+          <button class="classXPTO" style="color: blue;">click me!</button>
+          <div class="classXPTO">
+            <a href="javascript:void(0);" class="classXPTO" style="color: red;">click me!</a>
+            <br>
+            <button class="classXPTO" style="color: red;">click me!</button>
+          </div>
+        </div>
+      </div>
+
+      <a href="javascript:void(0);" class="classXPTO">click me!</a>
+
+      <p id="action-logs"></p>
+    </div>
+
+    <script type="text/javascript">
+      var current_time = function() {
+        var d = new Date();
+
+        return d.getHours()	+ ':' + d.getMinutes() + ':' + d.getSeconds() + '.' + d.getMilliseconds();
+      }
+
+      var action_detections = [];
+
+      document.getElementById('click').addEventListener('click', function(event) {
+        action_detections.push('<span>' + current_time() + '</span> clicked!');
+
+        document.getElementById(
+          'action-logs'
+        ).innerHTML = action_detections.slice(-10).reverse().join('<br>');
+      });
+    </script>
+  </body>
+</html>

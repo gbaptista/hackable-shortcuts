@@ -1,0 +1,26 @@
+html, body {
+  font-family: 'Open Sans', arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-image: url(../../images/bakcground/wallhaven-634508.jpg);
+  background-position:top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #050119;
+  padding: 16px 2px 2px 2px;
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 8px #250744;
+}
+
+.tabs-table {
+  font-size: 12px;
+  background-color: #FFF;
+}
+
+#tabs {
+  padding-top: 20px;
+}

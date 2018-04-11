@@ -1,0 +1,62 @@
+html, body {
+  font-family: 'Open Sans', arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.log {
+  border: 2px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 9%;
+  float: left;
+  margin: 2px;
+  min-height: 200px;
+}
+
+.log.record {
+  width: 31%;
+}
+.log.on_dispatch, .log.add_listener {
+  width: 30%;
+  min-height: 300px;
+}
+.log.add_listener {
+  width: 20%;
+}
+
+.log p {
+  padding: 0;
+  margin: 0;
+}
+
+.log h2 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+#on_dispatch {
+  color: #CCC;
+}
+
+.shortcut_lines code, #keys_sequence {
+  color: #c1016e;
+  font-weight: normal;
+}
+
+.shortcut_lines code.modifier, #modifier_keys {
+  color: #95c101;
+}
+
+.shortcut_lines code.context, #contexts {
+  color:#710bc4;
+}
+
+.shortcut_lines strong {
+  font-size: 13px;
+}
+
+.line {
+  color: #ddd;
+}
