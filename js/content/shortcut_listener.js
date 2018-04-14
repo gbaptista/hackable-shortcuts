@@ -3,7 +3,7 @@ var shortcuts = new Shortcuts.instance();
 var add_listener = function(shortcut) {
   shortcuts.add_listener(shortcut['shortcut'], function() {
     chrome.runtime.sendMessage({
-      action: 'dispatch_shortcut', shortcut: JSON.stringify(shortcut)
+      action: 'dispatch_shortcut_to_background', shortcut: JSON.stringify(shortcut)
     });
   });
 }

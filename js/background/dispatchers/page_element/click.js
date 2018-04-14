@@ -1,4 +1,4 @@
-dispatchers['page_element']['click'] = function(shortcut, sender) {
+dispatchers['page_element']['actions']['click']['dispatcher'] = function(shortcut, sender) {
   chrome.tabs.query({}, function(tabs) {
     for(i in tabs) {
       var tab = tabs[i];
@@ -8,7 +8,7 @@ dispatchers['page_element']['click'] = function(shortcut, sender) {
 
         if(shortcut['details']['domain'] == a_element.hostname) {
           chrome.tabs.sendMessage(tab.id, {
-            action: 'dispatch_shortcut', shortcut: message.shortcut
+            action: 'dispatch_shortcut_to_content', shortcut: shortcut
           });
         }
       }

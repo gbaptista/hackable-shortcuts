@@ -1,4 +1,4 @@
-dispatchers['tabs']['show_all'] = function(shortcut, sender) {
+dispatchers['tabs']['actions']['show_all']['dispatcher'] = function(shortcut, sender) {
   chrome.tabs.query({}, function(tabs) {
     for(i in tabs) {
       var tab = tabs[i];

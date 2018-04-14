@@ -1,3 +1,3 @@
-dispatchers['tabs']['new'] = function(shortcut, sender) {
+dispatchers['tabs']['actions']['new']['dispatcher'] = function(shortcut, sender) {
   chrome.tabs.create({ active: true });
 };
