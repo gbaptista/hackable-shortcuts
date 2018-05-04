@@ -51,7 +51,11 @@
 
         "vendor/jquery/jquery-3.3.1.slim.min.js",
 
-        "js/content/shortcuts/page_element.js",
+        "js/dispatchers.js",
+
+        "js/content/dispatchers/page_element/click.js",
+
+        "js/content/dispatcher.js",
 
         "vendor/gbaptista/best_selector/best_selector.js",
         "js/content/interaction_detector.js"
@@ -60,6 +64,15 @@
   ],
   "background": {
     "scripts": [
+      "js/dispatchers.js",
+
+      "js/background/dispatchers/page_element/click.js",
+
+      "js/background/dispatchers/tabs/close_current.js",
+      "js/background/dispatchers/tabs/hide_all.js",
+      "js/background/dispatchers/tabs/new.js",
+      "js/background/dispatchers/tabs/show_all.js",
+
       "js/background/dispatcher.js"
     ]
   },
